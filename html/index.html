@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="shortcut icon" href="/Practicas-js/blackjack-game/assets/img/base/logo.jpg">
+    <link rel="stylesheet" href="/Practicas-js/blackjack-game/assets/css/interfaceStyle.css">
+</head>
+<body>
+    <div id="modal" style="visibility: hidden;">
+            <h4>Configuración</h4>
+            <span class="displaybox" onclick="desplegarbox1()" id="displaybox1">Agresividad de IA <img id="flecha1" src="/Practicas-js/blackjack-game/assets/img/base/abajo.png" alt="flecha abajo"></span>
+            <div class="desplegar" id="box1">
+                <span class="d1" id="dificultad1button" onclick="dificultad1()">Poco arriesgada</span>
+                <span class="d2" id="dificultad2button" onclick="dificultad2()">Arriesgada</span>
+                <span class="d3" id="dificultad3button" onclick="dificultad3()">Muy arriesgada</span>
+                <span class="d3" id="dificultad4button" onclick="dificultad4()">
+                Variable</span>
+            </div>
+            <span class="displaybox" onclick="desplegarbox2()" id="displaybox2">Eleccion de valor de A <img id="flecha2" src="/Practicas-js/blackjack-game/assets/img/base/abajo.png" alt="flecha abajo"></span>
+            <div class="desplegar" id="box2">
+                <span class="d1" id="seleccionAuto" onclick="seleccionAutomatica ()">Automatico</span>
+                <span class="d3" id="seleccionManual" onclick="seleccionManual ()">Manual</span>
+            </div>
+            <span class="activado2" id="cerrar" onclick="abrirModal()">Cerrar</span>
+    </div>
+    <div class="superior">
+        <button id="menu-button" class="activado" onclick="abrirModal()"></button>
+        <h1>blackjack</h1>
+    </div>
+    <div class="menu"></div>
+    <div class="informacion">
+        <div class="score">
+            <h4>score</h4>
+            <p>P1 = <span id="ScoreP1">0</span></p>
+            <p>P2/PC = <span id="ScoreP2">0</span></p>
+            <button onclick="mostrar()">controls</button>
+        </div>
+        <div class="Controles" id="control" style="visibility: hidden;">
+            <p>J = Pedir Carta</p>
+            <p>K = Terminar</p>
+            <p>R = Reiniciar</p>
+        </div>
+        <div class="estado" id="estado" style="visibility: hidden;">
+            <p id="ganarPerder"></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="P1" id="Player">
+            <h2>Jugador 1</h2>
+            <p>lleva <span id="puntuacion">0</span></p>
+            <img src="/Practicas-js/blackjack-game/assets/img/card/grey_back.png" alt="Carta" id="Atras">
+        </div>
+        <div class="P2" id="Player2">
+            <h2>Computadora</h2>
+            <p>lleva <span id="puntuacion-compu">0</span></p>
+            <img src="/Practicas-js/blackjack-game/assets/img/card/grey_back.png" alt="Carta" id="Atras-compu">
+        </div>
+    </div>
+    <script src="/Practicas-js/blackjack-game/assets/js/style.js"></script>
+    <script src="/Practicas-js/blackjack-game/assets/js/GameRule.js"></script>
+</body>
+</html>

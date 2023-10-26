@@ -1,0 +1,271 @@
+body{
+    margin: 0;
+    background-color: rgb(24, 78, 24);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+.superior{
+    display: flex;
+    padding: 5px 5px 5px 5px;
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
+    font-size: 9px;
+    font-weight: 400;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.089);
+    gap: 5px;
+}
+.activado{
+    position: absolute;
+    cursor: pointer;
+    margin-right: 95%;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    border-radius: 17px;
+    border-width: 0px;
+    background-color: transparent;
+    background-image: url(/Practicas-js/blackjack-game/assets/img/base/engranaje.png);
+    background-size: cover;
+    z-index: 2;
+}
+.activado:hover{
+    background-color: transparent;
+    background-image: url(/Practicas-js/blackjack-game/assets/img/base/engranaje2.png);
+}
+.activado:active{
+    background-color: transparent;
+    background-image: url(/Practicas-js/blackjack-game/assets/img/base/engranaje1.png);
+}
+.desactivado{
+    position: absolute;
+    cursor: not-allowed;
+    margin-right: 95%;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    border-radius: 17px;
+    border-width: 0px;
+    background-color: red;
+    background-image: url(/Practicas-js/blackjack-game/assets/img/base/engranaje2.png);
+    background-size: cover;
+    z-index: 2;
+}
+#modal{
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    height: 110vh;
+    width: 98.3vw;
+    animation-duration: 2s;
+    z-index: 1;
+    gap: 10px;
+}
+#modal span{
+    cursor: pointer;
+    user-select: none;
+}
+.displaybox{
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.932);
+    border-radius: 3px;
+    margin-bottom: -35px;
+    transition-duration: .3s;
+}
+.displaybox img{
+    width: 10px;
+    height: 12px;
+}
+.displaybox:hover{
+    background-color: rgba(17, 17, 17, 0.949);
+}
+.displaybox:active{
+    background-color: rgba(255, 255, 255, 0.452);
+}
+.displaybox #flecha1{
+    transition-duration: 2s;
+}
+.displaybox #flecha2{
+    transition-duration: 2s;
+}
+.desplegar{
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(0);
+}
+.desplegar span{
+    padding: 5px 5px 5px 5px;
+    border-right: white solid 2px;
+    transition-duration: .2s;
+}
+.desplegar span:hover{
+    padding-left: 10px;
+}
+.d1{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgb(0, 121, 6) 100%);
+    background-size: 270px 1px;
+}
+.d1:hover{
+    background-position: -130px 0;
+    transition-duration: .2s;
+}
+.d2{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgb(255, 136, 0) 100%);
+    background-size: 200px 1px;
+}
+.d2:hover{
+    background-position: -100px 0;
+    transition-duration: .2s;
+}
+.d3{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgb(167, 0, 0) 100%);
+    background-size: 250px 1px;
+}
+.d3:hover{
+    background-position: -125px 0;
+    transition-duration: .2s;
+}
+.activado2{
+    margin-top: 15px;
+    padding: 5px 15px 5px 15px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(212,0,0,1) 100%);
+    background-size: 250px 1px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    transition-duration: .8s;
+}
+.activado2:hover{
+    background-position: -125px 0;
+    transition-duration: .8s;
+}
+.desactivado2{
+    margin-top: 15px;
+    cursor: not-allowed;
+    background-color: #860202;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+}
+@keyframes updown{
+    from{
+        margin-top: -100vh;
+        height: -300vh;
+    }
+    to{
+        margin-top: 0vh;
+        height: -100vh;
+    }
+}
+@keyframes downup {
+    from{
+        margin-top: 0vh;
+        height: -100vh;
+    }
+    to{
+        margin-top: -110vh;
+        height: -300vh;
+    }
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+.score{
+    padding: 0px 25px 5px 25px;
+    background-color: rgba(0, 0, 0, 0.171);
+    font-weight: 700;
+    border-bottom-left-radius: 8px;
+    color: white;
+}
+.score button{
+    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.24);
+    border-radius: 5px;
+    border-color: rgba(255, 255, 255, 0.24);
+    color: white;
+}
+.score button:hover{
+    background-color: rgb(0, 0, 0);
+}
+.score button:active{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.Controles{
+    padding: 0px 25px 5px 25px;
+    background-color: rgba(0, 0, 0, 0.171);
+    font-weight: 700;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    color: white;
+    animation-duration: 2s;
+}
+.estado{
+    padding: 0px 25px 5px 25px;
+    background-color: rgba(0, 0, 0, 0.171);
+    font-weight: 700;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    color: white;
+    animation-duration: 2s;
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+        width: 100%;
+      }
+      
+    to {
+      margin-left: 100%;
+      width: 300%
+    }
+  }
+.container{
+    margin-right: 265px;
+    flex-direction: column;
+    background-color: rgb(24, 78, 24);
+    color: white;
+}
+.container p{
+    margin: -10px 0px 10px 0px;
+}
+.container img{
+    width: 150px;
+    position: relative;
+    left: 100px;
+    margin-left: -95px;
+ 
+}
+.P1{
+    padding-bottom: 5px;
+}
