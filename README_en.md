@@ -24,7 +24,7 @@ git clone https://github.com/AngelGab006/ProjectGame.git
 Open the index.html file in your browser.
 
 ### Alternative use
-You can also play online: project-game-gilt.vercel.app
+You can also play online: [project-game.app](https://project-game-819k2p3pw-angelgab006s-projects.vercel.app/)
 
 ### How to support this project
 - Share the game with your friends.
