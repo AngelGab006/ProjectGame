@@ -185,6 +185,7 @@ body{
     display: flex;
     flex-direction: column;
     float: right;
+    overflow: hidden;
 }
 .score{
     padding: 0px 25px 5px 25px;

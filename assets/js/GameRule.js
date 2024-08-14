@@ -132,7 +132,7 @@ document.addEventListener('keyup', (event) => {
                 }
     
                 document.getElementById('puntuacion-compu').innerHTML = puntosPC;
-                document.getElementById('Player2').innerHTML += `<img src="/Practicas-js/blackjack-game/assets/img/card/${cartaPC}.png" alt="Carta" id="Carta">`
+                document.getElementById('Player2').innerHTML += `<img src="./assets/img/card/${cartaPC}.png" alt="Carta" id="Carta">`
         
                 cartas.splice(numeroAleatorio[0], 1);
                 numero.pop();
@@ -214,7 +214,7 @@ document.addEventListener('keyup', (event) => {
             }
 
             document.getElementById('puntuacion').innerHTML = puntos;
-            document.getElementById('Player').innerHTML += `<img src="/Practicas-js/blackjack-game/assets/img/card/${carta}.png" alt="Carta" id="Carta">`
+            document.getElementById('Player').innerHTML += `<img src="./assets/img/card/${carta}.png" alt="Carta" id="Carta">`
             
             cartas.splice(numeroAleatorio[0], 1);
             numero.pop();
@@ -237,11 +237,11 @@ document.addEventListener('keyup', (event) => {
         document.getElementById('puntuacion').innerHTML = puntos;
         document.getElementById('puntuacion-compu').innerHTML = puntosPC;
         if(atrasHabilitado == false){
-            document.getElementById('Player').innerHTML += '<img src="/Practicas-js/blackjack-game/assets/img/card/grey_back.png" alt="Carta" id="Atras">'
+            document.getElementById('Player').innerHTML += '<img src="./assets/img/card/grey_back.png" alt="Carta" id="Atras">'
             atrasHabilitado = true;
         }
         if(atrasHabilitadoPC == false){
-            document.getElementById('Player2').innerHTML += '<img src="/Practicas-js/blackjack-game/assets/img/card/grey_back.png" alt="Carta" id="Atras-compu">'
+            document.getElementById('Player2').innerHTML += '<img src="./assets/img/card/grey_back.png" alt="Carta" id="Atras-compu">'
             atrasHabilitadoPC = true;
         }
         for(let i = 0; i < 51; i++){
